@@ -1,0 +1,57 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+*.log
+npm-debug.log*
+results
+tmp
+
+# Coverage reports
+coverage
+
+# Serverless directories
+.serverless
+
+# API keys and secrets
+.env
+.env.production
+.env.staging
+.env.development
+infra-as-code/.configs.tfvars
+
+# Dependency directory
+node_modules
+jspm_packages
+bower_components
+**/npm-cache/*
+
+# Editors
+.idea
+*.iml
+.vscode
+*.swp
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Ignore built ts files
+dist/**/*
+
+# Ignore yarn.lock, since we use package-lock.json
+yarn.lock
+
+# Terraform
+**/.terraform*
+**/plan.out
+
+# TypeScript incremental compilation cache
+*.tsbuildinfo
