@@ -1,5 +1,6 @@
 import { Application } from 'express'
 
+import './containers';
 export default class Server {
   constructor(
     private app: Application,
