@@ -17,13 +17,14 @@
     "forceConsistentCasingInFileNames": true,
     "composite": true,
     "resolveJsonModule": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "include": [
     "**/*.ts"
   ],
   "exclude": [
-    "tests/**/*.ts",
     "scripts/*",
     "infra-as-code/*",
     "docs/*"

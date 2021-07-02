@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "dev": "ts-node ./src/bootstrap/index.ts",
-    "test": "jest ./tests"
+    "test": "jest ./test",
+    "clear_jest": "jest --clearCache"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.5.0"
   }
 }

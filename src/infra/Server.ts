@@ -1,8 +1,9 @@
-import { Application } from 'express'
-
+import "reflect-metadata"
+import './containers';
+import { IApplication } from "./HttpInteraces";
 export default class Server {
   constructor(
-    private app: Application,
+    public app: IApplication,
     private port: number
   ){}
 
