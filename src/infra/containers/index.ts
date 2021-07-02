@@ -1,8 +1,8 @@
 import { container } from 'tsyringe';
-import IUserRepository from '../../domain/models/IUserRepository';
-import UserRepository from '../../domain/models/UserRepository';
+import IHealthRepository from '../../domain/models/IHealthRepository';
+import FakeHealthRepository from '../../../tests/domain/fakes/FakeHealthRepository';
 
-container.registerSingleton<IUserRepository>(
-    'UserRepository',
-    UserRepository,
+container.registerSingleton<IHealthRepository>(
+    'HealthRepository',
+    FakeHealthRepository,
 );

@@ -1,24 +1,20 @@
-import CreateUserService from '../../../src/domain/features/CreateUserService'
-import healthcheck from '../../../src/domain/features/healthcheck'
-import FakeUserRepository from '../fakes/FakeUserRepository'
+import CreateHealth from '../../../src/domain/features/CreateHealth'
+import FakeHealthRepository from '../fakes/FakeHealthRepository'
 
 describe('', () => {
-  let fakeUserRepository: FakeUserRepository;
-  let createUser: CreateUserService;
+  let fakeHealthRepository: FakeHealthRepository;
+  let createHealth: CreateHealth;
   beforeEach(() => {
-    fakeUserRepository = new FakeUserRepository();
-    createUser =  new CreateUserService(fakeUserRepository)
+    fakeHealthRepository = new FakeHealthRepository();
+    createHealth =  new CreateHealth(fakeHealthRepository)
   })
 
   test('test healthcheck function', () => {
-    const res = healthcheck()
-    expect(res).toBe('health check answer')
-  })
-
-  it('should be able to crate a new user',async () => {
-    const user = await createUser.execute({name: 'Fernando', email: 'luiz.cendretti'});
-
-    expect(user.name).toBe('Fernando');
-    expect(user.email).toBe('luiz.cendretti')
+    const message = createHealth.execute({
+      message: 'health check answer',
+      date: new Date()
+    })
+    expect(message.message).toBe('health check answer')
+    expect(message).toHaveProperty('date')
   })
 })

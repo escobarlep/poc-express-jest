@@ -25,7 +25,6 @@
     "**/*.ts"
   ],
   "exclude": [
-    "tests/**/*.ts",
     "scripts/*",
     "infra-as-code/*",
     "docs/*"

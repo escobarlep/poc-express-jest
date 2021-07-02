@@ -1,9 +1,10 @@
-import IUserRepository from "./IUserRepository";
+import IHealth from "./dtos/IHealth";
+import IHealthRepository from "./IHealthRepository";
 
-class UserRepository implements IUserRepository {
-    public async create(user: any):Promise<any> {
-        return
+class HealthRepository implements IHealthRepository {
+    public create(message: IHealth): IHealth {
+        return message
     }
 }
 
-export default UserRepository;
+export default HealthRepository;
