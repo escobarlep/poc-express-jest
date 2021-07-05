@@ -1,9 +1,9 @@
 import IHealthRepository from '../../../src/domain/models/IHealthRepository'
 import IHealth from '../../../src/domain/models/dtos/IHealth';
 
-class FakeUserRepository implements IHealthRepository {
+class FakeHealthRepository implements IHealthRepository {
  private health: IHealth[] = [];
- 
+
  public create(message: IHealth): IHealth {
    this.health.push(message)
 
@@ -11,4 +11,4 @@ class FakeUserRepository implements IHealthRepository {
  }
 }
 
-export default FakeUserRepository;
+export default FakeHealthRepository;

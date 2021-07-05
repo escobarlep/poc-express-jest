@@ -4,7 +4,6 @@ import { IApplication, IRequest, IResponse } from '../../../infra'
 const createHealth =  container.resolve(CreateHealth)
 
 export const HealthCheckRoute = (app: IApplication) => {
-  // console.log('batata')
   app.get('/health', (req: IRequest, res: IResponse) => {
     const messages = createHealth.execute({
       message: 'health check answer',
