@@ -1,18 +1,14 @@
-import supertest from 'supertest';
-import init from '../../../../src/bootstrap/init'
+import supertest from 'supertest'
+import { server } from '../../../../src/bootstrap/index'
 
 describe('Integration', () => {
-  afterAll(async () => {
-    // await init.close();
-  });
-
   describe('GET /health', () => {
-    it('should return status code 200',  async () => {
-      const server = await supertest(init().app).get('/health')
+    it('should return status code 200', async () => {
+      const response = await supertest(server().app).get('/health')
 
-      expect(server.statusCode).toBe(200);
-      expect(server.body.message).toBe('health check answer');
-      expect(server.body).toHaveProperty('date');
+      expect(response.statusCode).toBe(200);
+      expect(response.body.message).toBe('health check answer');
+      expect(response.body).toHaveProperty('date');
     });
   });
 });

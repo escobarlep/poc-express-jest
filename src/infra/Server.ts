@@ -1,20 +1,19 @@
-import "reflect-metadata"
+import 'reflect-metadata'
 import './containers';
-import { IApplication } from "./HttpInteraces";
+import { IApplication } from './HttpInteraces'
 export default class Server {
   constructor(
     public app: IApplication,
     private port: number
-  ){}
+  ) { }
 
-  public bootstrap(){
+  public bootstrap() {
     this.app.listen(this.port, () => {
-      console.log(`Can you believe I am actually running on port ${this.port} ?`)
-      console.log(`Check it out http://localhost:${this.port}/health`)
+      console.log(`Server running. Test in http://localhost:${this.port}/health`)
     })
   }
 
-  public registerPlugin(plugin: any){
+  public registerPlugin(plugin: any) {
     this.app.use(plugin)
     return this
   }

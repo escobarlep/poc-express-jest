@@ -1,4 +1,4 @@
 export default interface IHealth {
-    message?: string;
-    date?: Date;
+    message?: string
+    date?: Date
 }

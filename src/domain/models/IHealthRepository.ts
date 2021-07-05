@@ -1,5 +1,5 @@
-import IHealth from "./dtos/IHealth";
+import IHealth from './dtos/IHealth'
 
 export default interface IHealthRepository {
-    create(message: IHealth): IHealth;
+  create(message: IHealth): IHealth
 }
